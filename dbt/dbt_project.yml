@@ -1,0 +1,15 @@
+name: pace
+version: 1.0.0
+config-version: 2
+
+dbt-cloud:
+  project-id: 70471823452350
+
+profile: pace
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  +materialized: view
