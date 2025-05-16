@@ -5,6 +5,6 @@ sources:
     database: "pace-459622"
     schema:   "pace"
     tables:
-      - name: "raw_ca_pace_rates_2022"
-      - name: "raw_ca_pace_rates_2023"
-      - name: "raw_ca_pace_rates_2024"
+      - name: "raw_CA_PACE_Rates_2022"
+      - name: "raw_CA_PACE_Rates_2023"
+      - name: "raw_CA_PACE_Rates_2024"

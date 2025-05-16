@@ -8,7 +8,7 @@ with
             *,
             split(rating_period, '-')[offset(0)] as rp_start_str,  -- Get rating period start and end dates as strings
             split(rating_period, '-')[offset(1)] as rp_end_str
-        from {{ source("raw", "raw_ca_pace_rates_2022") }}
+        from {{ source("raw", "raw_CA_PACE_Rates_2022") }}
     ),
 
     second as (
@@ -16,7 +16,7 @@ with
             *,
             split(rating_period, '-')[offset(0)] as rp_start_str,  -- Get rating period start and end dates as strings
             split(rating_period, '-')[offset(1)] as rp_end_str
-        from {{ source("raw", "raw_ca_pace_rates_2023") }}
+        from {{ source("raw", "raw_CA_PACE_Rates_2023") }}
     ),
 
     third as (
@@ -24,7 +24,7 @@ with
             *,
             split(rating_period, '-')[offset(0)] as rp_start_str,  -- Get rating period start and end dates as strings
             split(rating_period, '-')[offset(1)] as rp_end_str
-        from {{ source("raw", "raw_ca_pace_rates_2024") }}
+        from {{ source("raw", "raw_CA_PACE_Rates_2024") }}
     ),
     all_rates as (
 
