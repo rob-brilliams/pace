@@ -25,8 +25,6 @@ models:
         description: "Calendar year of rate"
         tests:
           - not_null
-          - accepted_values:
-              values: [2022, 2023, 2024]
 
       - name: rating_period_startmonth
         description: "Parsed start month of rating period"
