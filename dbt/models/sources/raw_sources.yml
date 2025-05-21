@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "pace-459622"
+    schema:   "pace"
+    tables:
+      - name: "raw_CA_PACE_Rates_2022"
+      - name: "raw_CA_PACE_Rates_2023"
+      - name: "raw_CA_PACE_Rates_2024"
