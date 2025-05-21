@@ -1,0 +1,57 @@
+# dbt/models/bronze/schema.yml
+version: 2
+
+models:
+  - name: bronze_pace_rates
+    description: "Bronze staging of PACE capitation rates (2022–24)"
+    columns:
+      - name: row_id
+        description: "Deterministic hash—unique per county/year/period"
+        tests:
+          - unique
+          - not_null
+
+      - name: county
+        description: "County name"
+        tests:
+          - not_null
+      
+      - name: organization
+        description: Name of the organization particpating in PACE program
+        tests:
+          - not_null
+
+      - name: year
+        description: "Calendar year of rate"
+        tests:
+          - not_null
+
+      - name: rating_period_startmonth
+        description: "Parsed start month of rating period"
+        tests:
+          - not_null
+
+      - name: rating_period_endmonth
+        description: "Parsed end month of rating period"
+        tests:
+          - not_null
+
+      - name: awop
+        description: "Amount That Would Otherwise Be Paid (USD)"
+        tests:
+          - not_null
+          
+      - name: midpoint
+        description: "Mid-point capitation rate (USD)"
+        tests:
+          - not_null
+
+      - name: lower_bound
+        description: "Lower bound of rate range (USD)"
+        tests:
+          - not_null
+
+      - name: upper_bound
+        description: "Upper bound of rate range (USD)"
+        tests:
+          - not_null
